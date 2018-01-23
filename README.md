@@ -9,12 +9,15 @@
 
 ```
 # Ubuntu 16.04
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
 sudo apt-get install gcc-multilib
-npm install
+cnpm install
 
 # CentOS 7
 sudo yum install glibc.i686
-npm install
+cnpm install
 ```
 
 2. 启动 `npm run start`
@@ -56,3 +59,4 @@ module.exports = {
 ```
 npm run dev 或 npm run dist
 ```
+
