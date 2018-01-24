@@ -22,7 +22,7 @@ WORKDIR /app/gallery
 ADD . /app/gallery/
 
 # cnpm install
-cnpm install
+RUN cnpm install
 
 # startup
 ENTRYPOINT ["npm", "run", "start"]
