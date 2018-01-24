@@ -24,5 +24,7 @@ ADD . /app/gallery/
 # cnpm install
 RUN cnpm install
 
+EXPOSE 3000
+
 # startup
 ENTRYPOINT ["npm", "run", "start"]
