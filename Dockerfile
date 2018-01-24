@@ -7,8 +7,8 @@ COPY sources.list /etc/apt/sources.list
 RUN echo "nameserver 114.114.114.114" >> /etc/resolv.conf
 RUN apt-get update
 
-# install glibc.i686
-RUN apt-get install gcc make glibc.i686 curl
+# install gcc-multilib
+RUN apt-get install gcc make gcc-multilib curl
 RUN apt-get autoremove
 RUN rm -rf /var/lib/apt/lists/*
 
@@ -16,11 +16,6 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-
-# install glibc.i686
-RUN apt-get install gcc make glibc.i686
-RUN apt-get autoremove
-RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app/gallery
 
