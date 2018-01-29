@@ -3,8 +3,6 @@ FROM ubuntu:16.04
 MAINTAINER AtomPi <atomissionpi@gmail.com>
 
 # prepare
-COPY sources.list /etc/apt/sources.list
-RUN echo "nameserver 114.114.114.114" >> /etc/resolv.conf
 RUN apt-get update
 
 # install gcc-multilib
